@@ -90,25 +90,30 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							{{form.username}}
+							<input type="text" name="username" placeholder="Username..." class="form-control">
+							<!-- {{form.username}} -->
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 							</div>
-							{{form.email}}
+							<input type="text" name="Email" placeholder="Email..." class="form-control">
+							<!-- {{form.email}} -->
 						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							{{form.password1}}
-						</div>
-						<div class="input-group mb-2">
+						<div class="input-group mb-1">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							{{form.password2}}
+							<input type="password" name="password" placeholder="Password..." class="form-control">
+							<!-- {{form.password1}} -->
+						</div>
+						<div class="input-group mb-1">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="password" placeholder="Confirm Password..."
+								class="form-control">
+							<!-- {{form.password2}} -->
 						</div>
 
 
