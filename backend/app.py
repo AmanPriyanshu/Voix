@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from find_trends import generate_trends
 import numpy as np
+import pickle
 
 WORD_LIMIT = 10
 
@@ -44,7 +45,10 @@ def get_post():
 @app.route('/make_comment', methods=['POST'])
 def make_comment():
 	data = request.get_json()
-	df = pd.DataFrame({'comments': [data['comment']]})
+	embed = get_embed(data['comment'])
+	clf = pickle.load(open('sentiment_model.sav', 'rb'))
+	embed = np.array([embed])
+	df = pd.DataFrame({'comments': [data['comment']], 'sentiment': clf.predict(embed)[0]})
 	if not os.path.isfile('./posts/post_'+str(data['index'])+'.csv'):
 		df.to_csv('./posts/post_'+str(data['index'])+'.csv', index=False, header=True, mode='w')
 	else:
