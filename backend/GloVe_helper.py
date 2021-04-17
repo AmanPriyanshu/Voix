@@ -1,6 +1,4 @@
 import numpy as np
-import nltk
-from nltk.stem import WordNetLemmatizer
 import string
 
 class GloVeLoader:
@@ -9,7 +7,6 @@ class GloVeLoader:
 		self.word_limit = word_limit
 		self.embeddings_dict = {}
 		self.glove_loader()
-		self.wordnet_lemmatizer = WordNetLemmatizer()
 		self.punctuation = string.punctuation
 		self.dims = dims
 
@@ -23,14 +20,11 @@ class GloVeLoader:
 
 	def pull_glove_embed(self, sentence):
 		vec = []
-		for w in nltk.word_tokenize(sentence)[:self.word_limit]:
+		for w in sentence.split()[:self.word_limit]:
 			try:
 				vec.append(self.embeddings_dict[w.lower()])
 			except:
-				try:
-					vec.append(self.embeddings_dict[self.wordnet_lemmatizer.lemmatize(w.lower())])
-				except:
-					vec.append(np.zeros(self.dims))
+				vec.append(np.zeros(self.dims))
 		vec += [np.zeros(self.dims) for _ in range(self.word_limit - len(vec))]
 		vec = np.stack(vec)
 		vec = vec.flatten()
@@ -39,3 +33,6 @@ class GloVeLoader:
 def get_embed(sentence):
 	gl = GloVeLoader()
 	return gl.pull_glove_embed(sentence)
+
+if __name__ == '__main__':
+	print(get_embed("hello how are you?"))
