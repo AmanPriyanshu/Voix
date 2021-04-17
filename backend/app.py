@@ -48,7 +48,7 @@ def make_comment():
 	embed = get_embed(data['comment'])
 	clf = pickle.load(open('sentiment_model.sav', 'rb'))
 	embed = np.array([embed])
-	df = pd.DataFrame({'comments': [data['comment']], 'sentiment': clf.predict(embed)[0]})
+	df = pd.DataFrame({'author':[data['author']], 'comments': [data['comment']], 'sentiment': clf.predict(embed)[0]})
 	if not os.path.isfile('./posts/post_'+str(data['index'])+'.csv'):
 		df.to_csv('./posts/post_'+str(data['index'])+'.csv', index=False, header=True, mode='w')
 	else:
