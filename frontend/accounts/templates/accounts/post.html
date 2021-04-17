@@ -11,19 +11,20 @@
 
     <style>
         body {
-            background: linear-gradient(-90deg, #73c65a, #9cde84);
+            background: linear-gradient(-90deg, #000000, #252525d2);
         }
 
         .container {
-            margin: auto;
-            margin-top: 50vh;
-            transform: translateY(-50%);
+            margin: 400px;
+            margin-top: 20vh;
+            transform: translateY(-30%);
         }
 
         .container .card {
-            background-color: #fff;
-            padding: 0 16px;
-            border-radius: 4px;
+            background-color: rgba(48,47,47, 0.8);
+            width : 700px;
+            padding: 4px 16px;
+            border-radius: 5px;
             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.05);
         }
 
@@ -33,15 +34,17 @@
 
         .container .card .picture img {
             width: 40px;
-            border-radius: 50px;
+            border-radius: 100px;
         }
-
-        .container .card .name {}
-
-        .container .card .job {
+        .container .card .name {
+            color:rgba(14, 14, 14, 0.856);
+            font-size: 18px;
+            padding: 11px;
+        }
+        .container .card .author {
             margin-top: -3px;
-            font-size: 12px;
-            color: #999;
+            font-size: 8px;
+            color: rgb(214, 48, 48);
             display: table;
         }
 
@@ -52,7 +55,7 @@
         .post-body textarea {
             width: 100%;
             padding: 10px;
-            background-color: #f7f7f7;
+            background-color: #363636;
             border: none;
             font-size: 12px;
             resize: none;
@@ -65,7 +68,7 @@
         .icon {
             border-radius: 50px;
             border: none;
-            color: #6bbd52;
+            color: #e8ece7;
             background-color: #f7f7f7;
             font-size: 14px;
             width: 30px;
@@ -110,8 +113,8 @@
             padding: 0px 25px;
             line-height: 30px;
             border: none;
-            color: #fff;
-            background-color: #6bbd52;
+            color: rgba(250, 91, 91, 0.897);
+            background-color: #222222;
             cursor: pointer;
             border-radius: 4px;
             text-transform: uppercase;
@@ -130,7 +133,7 @@
             content: " ";
             width: 15px;
             height: 2px;
-            background-color: #6bbd52;
+            background-color: #f35353e7;
             position: absolute;
             top: 8px;
             left: 10px;
@@ -165,8 +168,7 @@
                     <img src="anon.jpg" />
                 </div>
                 <div class="name">
-                    Shiwi Sharma
-                    <span class="job">Web developer</span>
+                    Author
                 </div>
             </div>
             <div class="post-body col-md-12">
