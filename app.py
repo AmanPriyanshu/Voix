@@ -1,11 +1,9 @@
 import home
 import trending
 import streamlit as st
-PAGES = {
-    "Home": home,
-    "Trending": trending
-}
-st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Go to", list(PAGES.keys()))
-page = PAGES[selection]
-page.app()
+from multiapp import MultiApp
+
+app = MultiApp()
+app.add_app("Home", home.app)
+app.add_app("Trending", trending.app)
+app.run()
