@@ -10,7 +10,7 @@ The idea utilizes the concept of Unsupervised Clustering and Differential Privac
 
 ## How we built it?
 
-We used Streamlit for creating our site. While beuilding we utilized the concept of abstraction and inheritance to create a simple to understand infrastructure for our site.
+We used Streamlit for creating our site. While building we utilized the concept of abstraction and inheritance to create a simple to understand infrastructure for our site.
 
 We used the federated averaging algorithm and laplacian noise implementation for creating a differential privacy system. The two combined provided a backdrop for anonymizing the users of our site, while we used an interaction counter hosted on our server per post. These two became the backbone for creating the trending tab on our platform.
 
