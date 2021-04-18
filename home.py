@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-NAME = 'SOMPY'
+NAME = 'Voix'
 URL = "http://shutdown20011.pythonanywhere.com/"
 
 def app():
@@ -19,4 +19,3 @@ def app():
 		}
 
 		r = requests.post(url=URL+"make_post", json=post_ref)
-		print(r.text)
