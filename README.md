@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-An anonymous platform for uplifting communities and generating promoting civic participation. Social media platforms hold great power in how our modern society defines itself, we believe that this can be taken a step further. Instead of forming tiny self-absorbed echo chambers, we can utilize this technology to further grow comradery and find points of congruity between different communities. Social/Civic issues are in the minds of the general public and irrespective of their beliefs and interests these issues still take a toll on them and therefore, we came up with a social media platform that utilizes privacy enabled machine learning to recover ideas affecting communities and bring them to the top of our platform. These are then explored by sentiment analysis for gauging public views on said topic, which is then reported to local/civic authorities.
+An anonymous platform for uplifting communities and promoting civic participation. Social media platforms hold great power in how our society defines itself, we believe that this can be taken a step further. Social media has often been criticized for promoting self-obssesion, we believe that it can however be used for communal betterment. We utilized some  basic web dev tools to develop a space where people can find points of congruity between different communities. Social/Civic issues are always in the minds of the general public and irrespective of their beliefs and interests these issues still take a toll on them and therefore, we came up with a social media platform that utilizes privacy enabled machine learning to recover ideas affecting communities and bring them to the top of our platform. These are then explored by sentiment analysis for gauging public views on said topic, which is then reported to local/civic authorities.
 
 ## What it does?
 
@@ -18,11 +18,11 @@ The use of sentiment analysis using natural language processing for gauging inte
 
 ## Challenges we ran into?
 
-Word Embeddings are memory intensive and we used `Effective Dimensionality Reduction for Word Embeddings - Vikas Raunak et al.` to reduce memory demad. In our utilization of the above library we also contributed to the open-source community by creating an executable Python3 version of it. 
+Word Embeddings are memory intensive and we used `Effective Dimensionality Reduction for Word Embeddings - Vikas Raunak et al.` to reduce memory demand. In our utilization of the above library we also contributed to the open-source community by creating an executable Python3 version of it. 
 
 ## What we learned?
 
-Some of the key take-aways from developing this project underline our newfound love for developing a supportive community. Developing a project which brought people closer instead of further apart. We also learnt a lot about social-echo-chambers and how large social media platforms have generated them due to their recommendation algorithms, our idea to use an unbiased, crowdsourced retrieval system for supplying posts on the trending tab may improve on this considerably. 
+Some of the key take-aways from developing this project underline our newfound love for developing for a supportive community. Developing a project which brought people closer instead of further apart. We also learnt a lot about social-media spaces and how large social media platforms have generated them due to their recommendation algorithms, our idea to use an unbiased, crowdsourced retrieval system for supplying posts on the trending tab may improve on this considerably. 
 
 ## What’s next for Voix?
 
